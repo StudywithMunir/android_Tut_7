@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+<!--    android:password="true" shows text in asteric/star form-->
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Type your Command here"
+        android:layout_gravity="center"
+        android:id="@+id/et"
+        android:password="true"
+
+        />
+
+<!--    weightSum is used to define the total weigth of the layout
+        so each widget can take according to their size-->
+
+    <LinearLayout
+        android:weightSum="100"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+<!--        setting layout_weight= 50 for button and 50 for togglebutton so each takes equal size even -->
+<!--        if their width set to fill/match parent-->
+
+<!--        if we set layout_weight=80 for togglebutton and 20 for button then-->
+<!--        button takes larger width than togglebutton bcz layout_weight works in inverse order-->
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="30"
+        android:id="@+id/b1"
+        android:layout_gravity="center"
+        android:text="Try Command"
+        />
+
+<!--        if android:checked="true" it shows on if fasle then off-->
+
+    <ToggleButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="70"
+        android:id="@+id/tb1"
+        android:checked="true"
+
+        />
+
+
+</LinearLayout>
+
+<!--        if you set textview width to wrap_content that output is not able to change its position-->
+<!--        to left,right,center-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/tv"
+        android:text="Invalid"
+         />
+
+</LinearLayout>
